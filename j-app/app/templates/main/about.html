@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block app_content %}
+<h1>About</h1><br>
+
+<p>Info about the site:</p>
+
+<ul>
+    <li>GitHub link: <a href="https://github.com/nathanesau/try_j">https://github.com/nathanesau/try_j</a>.</li>
+    <li>Scripts are run using jconsole.</li>
+    <li>jconsole was built from  <a href="https://github.com/codereport/jsource">https://github.com/codereport/jsource</a>.</li>
+    <li>Site is built using flask.</li>
+    <li>Site is running on a docker container on a Digital Ocean server.</li>
+</ul>
+
+{% endblock %}

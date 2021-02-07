@@ -1,0 +1,15 @@
+td {
+    vertical-align: baseline;
+}
+
+textarea {
+    width: 500px;
+    height: 307px;
+}
+
+.editorContainer {
+    width: 500px;
+    height: 307px;
+    border-style: solid;
+    border-width: 1px;
+}

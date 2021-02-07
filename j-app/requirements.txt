@@ -1,0 +1,6 @@
+flask_bootstrap==3.3.7.1
+flask_wtf==0.14.3
+flask_cors==3.0.9
+flask==1.1.2
+python-dotenv==0.15.0
+wtforms==2.3.3

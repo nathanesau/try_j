@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block app_content %}
+<h1>Try J</h1><br>
+
+<p>
+A site for running J code. I hope the site allows many people to try out J.
+</p>
+
+<!--(inspired by <a href="https://www.onlinegdb.com/online_c++_compiler">online gdb</a>)-->
+
+<table width="100%">
+    <thead>
+        <th>Input</th>
+        <th>Output</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td width="50%">
+                <br>
+                <div class="editorContainer" id="script">
+                </div>
+                <br>
+                <button class="btn btn-secondary" onclick="run_script()">Run Script</button>
+            </td>
+            <td width="50%"><br>
+                <textarea disabled id="output"></textarea>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<script>
+    var editorContainer = document.querySelector('.editorContainer')
+    var editor = CodeMirror(editorContainer, {
+        lineNumbers: true,
+        // NOTE: j mode current doesn't provide syntax highlighting
+        mode: 'j',
+        value: '1+2*i.10\navg=: +/ % #\navg 1 2 3 4'
+    })
+
+    function run_script() {
+        $.ajax({
+            type: 'POST',
+            url: "{{ url_for('main.run_script') }}",
+            contentType: 'application/json',
+            data: JSON.stringify({ 'script': editor.getValue() })
+        }).done(function (response) {
+            $('#output').text(response);
+        });
+    }
+</script>
+
+{% endblock %}

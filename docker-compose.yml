@@ -1,0 +1,12 @@
+# NOTE: docker-compose will create network automatically
+# this allows the containers to communicate with each other
+version: '3.4'
+
+services:
+  j-app:
+    build: j-app
+    image: nathanesau/try_j:j-app
+    container_name: j-app
+    restart: always
+    ports:
+      - 80:80
