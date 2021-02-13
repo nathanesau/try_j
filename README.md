@@ -14,6 +14,3 @@ docker-compose up -d
 docker-compose down
 ```
 
-## Additional Information
-
-* DockerHub: https://hub.docker.com/repository/docker/nathanesau/try_j
