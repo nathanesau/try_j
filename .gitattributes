@@ -1,5 +1,4 @@
-# exclude html from linguist
+# exclude htmt and css from linguist
 # https://stackoverflow.com/questions/19052834/is-it-possible-to-exclude-files-from-git-language-statistics
 j-app/app/templates/* linguist-generated
 j-app/app/static/* linguist-generated
-j-app/boot.sh linguist-generated
