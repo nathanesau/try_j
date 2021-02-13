@@ -1,1 +1,2 @@
-j-app/app/templates linguist-vendored=false
+# exclude html from linguist
+j-app/app/templates/* linguist-generated
