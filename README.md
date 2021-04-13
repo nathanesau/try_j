@@ -2,7 +2,7 @@
 
 Site which provides interactive terminal for running J code.
 
-* http://tryj.freeddns.org
+* http://tryj.strangled.net/
 
 Use docker-compose to bring up the project.
 
